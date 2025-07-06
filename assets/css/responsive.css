@@ -1,0 +1,148 @@
+@media(max-width: 956px) {
+
+    .layout {
+        grid-template-areas:
+            "header header"
+            "slider slider"
+            "main main"
+            "aside aside";
+    }
+
+    .layout__main {
+        margin-right: 0;
+    }
+
+    .layout__aside {
+        margin-top: 3rem;
+    }
+
+    .header__container-title {
+        width: 100%;
+
+    }
+
+    .header__img {
+        width: 100%;
+    }
+
+    .aside__login {
+        align-items: center;
+    }
+
+    .login__form-group {
+        width: 65%;
+    }
+
+    .login__submit {
+        width: 20rem;
+    }
+}
+
+@media(max-width: 696px) {
+
+    .layout__header {
+        text-align: center;
+    }
+
+    .header__nav {
+        height: auto;
+        padding: 2rem;
+
+    }
+
+    .nav__list {
+        display: flex;
+        text-align: center;
+        flex-direction: column;
+        gap: 3rem;
+
+    }
+
+    .layout__articles {
+        margin-right: 0;
+    }
+
+    .list__link {
+        width: 100%;
+        font-size: 1.5rem;
+    }
+
+    .layout__slider {
+        height: 22rem;
+    }
+
+    .slider__btn-prev,
+    .slider__btn-next {
+        width: 3rem;
+        height: 3rem;
+        font-size: 2rem;
+        top: calc(50% - 1.5rem);
+
+    }
+
+
+
+    .header__text {
+        font-size: 3.5rem;
+    }
+
+    .article__title {
+
+        font-size: 3rem;
+    }
+
+    .article__body {
+        font-size: 1.5rem;
+    }
+
+    .article__btn {
+        font-size: 1.5rem;
+        width: 13rem;
+        
+    }
+
+    .article__date {
+        font-size: 1.5rem;
+    }
+}
+
+
+@media(max-width: 380px) {
+
+
+    .header__text {
+        font-size: 2.5rem;
+    }
+
+    .slider__btn-prev,
+    .slider__btn-next {
+        width: 2rem;
+        height: 2rem;
+        font-size: 2rem;
+        top: calc(50% - 1rem);
+
+    }
+
+    .layout__slider {
+        height: 12rem;
+    }
+
+    .article__title {
+
+        font-size: 2rem;
+    }
+
+    .article__body {
+        font-size: 1.5rem;
+    }
+
+    .article__btn {
+        font-size: 1.2rem;
+
+        width: 10rem;
+    }
+
+    .article__date {
+        font-size: 1.4rem;
+    }
+}
