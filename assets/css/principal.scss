@@ -6,6 +6,7 @@ $color-primary-transition-link: #235e3d;
 $color-primary-transition-btn: #2d8453;
 $color-shadow: #b7b4b4;
 $date-color: #aaa5a5;
+$accordion__header__color: #f6f6f6;
 
 
 html {
@@ -126,11 +127,12 @@ body {
     opacity: 1;
 }
 
-.layout__articles {
+.layout__articles,
+.layout__main {
     grid-area: main;
     display: flex;
     flex-direction: column;
-    gap: 3rem;
+    gap: 1.5rem;
     margin-right: 7rem;
 }
 
@@ -205,7 +207,7 @@ body {
     gap: 1.5rem;
 }
 
-.aside__login--hide{
+.aside__login--hide {
     display: none;
 }
 
@@ -269,3 +271,134 @@ body {
 .footer__top {
     cursor: pointer;
 }
+
+.secction__title {
+    font-size: 3rem;
+}
+
+.main__accordion {
+
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    padding-right: 15rem;
+}
+
+
+.accordion__collapse--open .collapse__body {
+    max-height: 390px;
+    //border: 1px $color-shadow solid;
+    border: 1px $color-shadow solid;
+    border-top: none;
+    transition: all 300ms ease-in-out;
+
+
+}
+
+.accordion__collapse--open .collapse__header {
+    background-color: $primary-color;
+    border-radius: 0.6rem 0.6rem 0 0;
+    border-bottom-color: transparent;
+    transition: all 050ms ease-in-out;
+
+
+
+}
+
+.accordion__collapse--open .header__article--title {
+    color: $accordion__header__color;
+}
+
+.collapse__body {
+    background-color: #ffffff;
+    border: 1px $color-shadow solid;
+    border-radius: 0 0 0.6rem 0.6rem;
+    border-top: none;
+    border-bottom-color: transparent;
+    overflow: hidden;
+    transition: all 300ms ease-in-out;
+    max-height: 0;
+
+}
+
+
+.collapse__text {
+    padding: 2rem 4.5rem;
+}
+
+
+.collapse__header {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: $accordion__header__color;
+    border: 1px $color-shadow solid;
+
+    cursor: pointer;
+    border-radius: 0.6rem;
+    padding: 0.8rem 1rem;
+    color: $gb-header-nav;
+
+    transition: all 600ms ease-in-out;
+
+
+}
+
+.accordion__collapse--open .collapse__header>.fa-chevron-up {
+    opacity: 1;
+
+    color: $bg-primary-color-layout;
+
+}
+
+.accordion__collapse--open .collapse__header>.fa-chevron-down {
+    opacity: 0;
+}
+
+
+.collapse__header>.fa-solid {
+    position: absolute;
+    padding-left: 0.5rem;
+
+}
+
+.collapse__header>.fa-chevron-up {
+    opacity: 0;
+    font-size: 1.2rem;
+
+    transition: all 300ms ease-in-out;
+
+}
+
+.collapse__header>.fa-chevron-down {
+    opacity: 1;
+    font-size: 1.2rem;
+    transition: all 300ms ease-in-out;
+
+}
+
+
+
+.collapse__header>.header__article--title {
+    margin-left: 2.5rem;
+
+}
+
+
+.layout__time {
+
+
+    width: 30rem;
+    margin-right: auto;
+    text-align: center;
+
+    .time__text {
+        padding: 2rem;
+
+        border: 6px dashed $gb-header-nav ;
+        font-size: 4.5rem;
+
+    }
+}
+
