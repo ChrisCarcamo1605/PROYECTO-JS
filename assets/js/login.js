@@ -66,10 +66,7 @@ let getUser = (name) => {
         signForm.classList.remove("aside__login");
         signForm.classList.add("aside__login--hide");
         dataSession.classList.remove("aside__data--hide")
-
-
     }
-
 }
 
 dataLogout.addEventListener("click", () => {

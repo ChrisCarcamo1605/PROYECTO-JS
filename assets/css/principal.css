@@ -112,7 +112,8 @@ body {
 }
 
 .layout__articles,
-.layout__main {
+.layout__main,
+.layout__contacto {
   grid-area: main;
   display: flex;
   flex-direction: column;
@@ -156,6 +157,7 @@ body {
 
 .layout__aside {
   grid-area: aside;
+  padding: 0.8rem;
 }
 
 .aside__header {
@@ -350,4 +352,91 @@ body {
   padding: 2rem;
   border: 6px dashed #333333;
   font-size: 4.5rem;
+}
+
+.contacto__form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-right: auto;
+  width: 30rem;
+}
+
+.contacto__title {
+  font-size: 3rem;
+}
+
+.contacto__group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.contacto__input,
+.contacto__select {
+  border: 2px solid #b7b4b4;
+  outline: none;
+  padding: 5px;
+  font-size: 1.5rem;
+}
+
+.contacto__input:focus,
+.contacto__select:focus {
+  border: 2px solid #235e3d;
+}
+
+.contacto__btn {
+  border: 1px #235e3d solid;
+  width: 15rem;
+  padding: 0.5rem 1rem;
+  transition: all 100ms linear;
+}
+
+.contacto__group select {
+  background-color: #e9e9ed;
+}
+
+.contacto__btn:hover {
+  background-color: #235e3d;
+  color: white;
+}
+
+.just-validate-error-label {
+  background-color: red !important;
+  color: white !important;
+  text-align: center;
+  padding: 0.5rem;
+}
+
+.themes {
+  top: 40%;
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 0.5rem;
+  left: 0;
+  width: 4rem;
+  height: 12rem;
+  background-color: white;
+  opacity: 0.8;
+}
+
+.themes > div {
+  border: 1px solid white;
+  height: 3rem;
+  width: 100%;
+  cursor: pointer;
+}
+
+.themes__green {
+  background-color: #276061;
+}
+
+.themes__blue {
+  background-color: #3f8bbd;
+}
+
+.themes__red {
+  background-color: #a04e4f;
 }/*# sourceMappingURL=principal.css.map */
