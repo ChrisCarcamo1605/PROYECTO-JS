@@ -40,7 +40,19 @@ loginSubmit.addEventListener("click", (e) => {
 
     let user = new User(nombre, correo, contrasena);
 
-    localStorage.setItem(user.nombre, JSON.stringify(user));
+    let users = localStorage.getItem("users");
+    let usersData = JSON.parse(users);
+    if (usersData == null) {
+        console.log("NO hay datos");
+        let usersArray = [];
+        usersArray.push(user)
+        localStorage.setItem("users", JSON.stringify(usersArray));
+    } else {
+        console.log("SI hay datos");
+
+        usersData.push(user);
+        localStorage.setItem("users", JSON.stringify(usersData));
+    }
 
     inputNombre.value = "";
     inputCorreo.value = "";
@@ -48,18 +60,20 @@ loginSubmit.addEventListener("click", (e) => {
 
     console.log("Usuario registrado correctamente");
 
-    getUser(nombre)
+    getUser();
 })
 
 
 
-let getUser = (name) => {
+let getUser = () => {
+    let users = localStorage.getItem("users");
+    let usersData = JSON.parse(users);
+    console.log("usuarios traidos ")
 
-    let userExist = localStorage.getItem(name);
+    let user = usersData[usersData.length - 1]
+    console.log("usuario traido " + user)
+    if (users) {
 
-    if (userExist) {
-
-        let user = JSON.parse(userExist);
         console.log(user.nombre)
         dataNombre.innerHTML = user.nombre;
 
@@ -83,11 +97,14 @@ let logout = () => {
 }
 
 if (localStorage.length >= 1) {
-    let user = localStorage.key(localStorage.length - 1);
-    getUser(user);
+    let users = localStorage.getItem("users");
+    let usersData = JSON.parse(users);
+    console.log(usersData)
+    //  getUser(user);
 
 }
 
+window.addEventListener("load", getUser());
 
 class User {
     nombre;

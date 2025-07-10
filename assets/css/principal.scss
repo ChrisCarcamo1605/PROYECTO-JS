@@ -1,5 +1,4 @@
 $bg-primary-color-layout: white;
-$primary-color: #235e3d;
 $gb-header-nav: #333333;
 $color-nav-link: white;
 $color-primary-transition-link: #235e3d;
@@ -12,6 +11,7 @@ $accordion__header__color: #f6f6f6;
 html {
     font-size: 10px;
     box-sizing: border-box;
+    --primary-color: #235e3d;
 
 }
 
@@ -492,6 +492,20 @@ body {
 }
 
 .themes__red {
+    background-color: #a04e4f;
+
+}
+
+.themes__green--active {
+    background-color: #276061;
+}
+
+.themes__blue--active {
+    background-color: #3f8bbd;
+
+}
+
+.themes__red--active {
     background-color: #a04e4f;
 
 }

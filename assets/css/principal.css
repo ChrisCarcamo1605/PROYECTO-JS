@@ -3,8 +3,21 @@ html {
   box-sizing: border-box;
 }
 
+:root {
+  --bg-primary-color-layout: white;
+  --gb-header-nav: #333333;
+  --color-nav-link: white;
+  --color-primary-transition-link: #235e3d;
+  --color-primary-transition-btn: #2d8453;
+  --color-shadow: #b7b4b4;
+  --date-color: #aaa5a5;
+  --accordion-header-color: #f6f6f6;
+  --primary-color: #235e3d;
+  --image-background: url("../img/hojas.jpg");
+}
+
 body {
-  background-image: url("../img/cielo.jpg");
+  background-image: var(--image-background);
   background-repeat: no-repeat;
   background-size: cover;
   font-size: 1.6rem;
@@ -18,7 +31,7 @@ body {
   width: 80%;
   padding: 3rem;
   margin: 2rem auto;
-  background: white;
+  background: var(--bg-primary-color-layout);
 }
 
 .layout__header {
@@ -29,16 +42,16 @@ body {
   display: inline-block;
   margin-bottom: 2rem;
   padding: 0.5rem 1.5rem;
-  background-color: #235e3d;
+  background-color: var(--primary-color);
 }
 
 .header__text {
-  color: white;
+  color: var(--bg-primary-color-layout);
   font-size: 5rem;
 }
 
 .header__nav {
-  background-color: #333333;
+  background-color: var(--gb-header-nav);
   width: 100%;
   height: 5rem;
   padding: 0 2rem;
@@ -54,14 +67,14 @@ body {
 }
 
 .list__link {
-  color: white;
+  color: var(--color-nav-link);
   padding: 1rem;
   justify-content: center;
   transition: all 100ms linear;
 }
 
 .list__link:hover {
-  background-color: #235e3d;
+  background-color: var(--color-primary-transition-link);
 }
 
 .layout__slider {
@@ -70,9 +83,9 @@ body {
   width: 100%;
   height: 40rem;
   overflow: hidden;
-  border: 5px solid white;
+  border: 5px solid var(--bg-primary-color-layout);
   border-radius: 5px;
-  box-shadow: 0px 0px 5px #b7b4b4;
+  box-shadow: 0px 0px 5px var(--color-shadow);
   margin-bottom: 4rem;
 }
 
@@ -89,8 +102,8 @@ body {
   position: absolute;
   border-radius: 100%;
   cursor: pointer;
-  background-color: #333333;
-  color: white;
+  background-color: var(--gb-header-nav);
+  color: var(--color-nav-link);
   z-index: 2;
   border: none;
   border-radius: 100%;
@@ -132,7 +145,7 @@ body {
 }
 
 .article__date {
-  color: #aaa5a5;
+  color: var(--date-color);
 }
 
 .article__body {
@@ -143,15 +156,15 @@ body {
   width: 12rem;
   padding: 1.5rem 1rem;
   margin-top: 0.5rem;
-  background-color: #235e3d;
-  color: white;
+  background-color: var(--primary-color);
+  color: var(--color-nav-link);
   cursor: pointer;
   border: none;
   transition: all 200ms linear;
 }
 
 .article__btn:hover {
-  background-color: #2d8453;
+  background-color: var(--color-primary-transition-btn);
   scale: 1.06;
 }
 
@@ -177,7 +190,7 @@ body {
 }
 
 .title__span {
-  background-color: white;
+  background-color: var(--bg-primary-color-layout);
   padding: 0.5rem;
 }
 
@@ -207,19 +220,19 @@ body {
 
 .login__input {
   width: 100%;
-  border: 2px #b7b4b4 solid;
+  border: 2px var(--color-shadow) solid;
   outline: none;
 }
 
 .login__input:focus {
-  border: 2px #235e3d solid;
+  border: 2px var(--primary-color) solid;
 }
 
 .login__submit {
   width: 100%;
   padding: 1rem;
   cursor: pointer;
-  border: 1px #b7b4b4 solid;
+  border: 1px var(--color-shadow) solid;
   transition: all 300msc linear;
 }
 
@@ -232,14 +245,14 @@ body {
 }
 
 .login__submit:hover {
-  border: 1px #235e3d solid;
-  background-color: #2d8453;
-  color: white;
+  border: 1px var(--color-primary-transition-link) solid;
+  background-color: var(--color-primary-transition-btn);
+  color: var(--color-nav-link);
 }
 
 .footer {
   max-width: 128rem;
-  background-color: #333333;
+  background-color: var(--gb-header-nav);
   margin: 0 auto;
   margin-top: 5rem;
   margin-bottom: 0.5rem;
@@ -248,7 +261,7 @@ body {
   flex-direction: row;
   justify-content: space-between;
   padding: 1.5rem;
-  color: white;
+  color: var(--bg-primary-color-layout);
 }
 
 .footer__top {
@@ -268,25 +281,25 @@ body {
 
 .accordion__collapse--open .collapse__body {
   max-height: 390px;
-  border: 1px #b7b4b4 solid;
+  border: 1px var(--color-shadow) solid;
   border-top: none;
   transition: all 300ms ease-in-out;
 }
 
 .accordion__collapse--open .collapse__header {
-  background-color: #235e3d;
+  background-color: var(--primary-color);
   border-radius: 0.6rem 0.6rem 0 0;
   border-bottom-color: transparent;
   transition: all 50ms ease-in-out;
 }
 
 .accordion__collapse--open .header__article--title {
-  color: #f6f6f6;
+  color: var(--accordion-header-color);
 }
 
 .collapse__body {
   background-color: #ffffff;
-  border: 1px #b7b4b4 solid;
+  border: 1px var(--color-shadow) solid;
   border-radius: 0 0 0.6rem 0.6rem;
   border-top: none;
   border-bottom-color: transparent;
@@ -304,42 +317,42 @@ body {
   display: flex;
   flex-direction: row;
   align-items: center;
-  background-color: #f6f6f6;
-  border: 1px #b7b4b4 solid;
+  background-color: var(--accordion-header-color);
+  border: 1px var(--color-shadow) solid;
   cursor: pointer;
   border-radius: 0.6rem;
   padding: 0.8rem 1rem;
-  color: #333333;
+  color: var(--gb-header-nav);
   transition: all 600ms ease-in-out;
 }
 
-.accordion__collapse--open .collapse__header > .fa-chevron-up {
+.accordion__collapse--open .collapse__header>.fa-chevron-up {
   opacity: 1;
-  color: white;
+  color: var(--bg-primary-color-layout);
 }
 
-.accordion__collapse--open .collapse__header > .fa-chevron-down {
+.accordion__collapse--open .collapse__header>.fa-chevron-down {
   opacity: 0;
 }
 
-.collapse__header > .fa-solid {
+.collapse__header>.fa-solid {
   position: absolute;
   padding-left: 0.5rem;
 }
 
-.collapse__header > .fa-chevron-up {
+.collapse__header>.fa-chevron-up {
   opacity: 0;
   font-size: 1.2rem;
   transition: all 300ms ease-in-out;
 }
 
-.collapse__header > .fa-chevron-down {
+.collapse__header>.fa-chevron-down {
   opacity: 1;
   font-size: 1.2rem;
   transition: all 300ms ease-in-out;
 }
 
-.collapse__header > .header__article--title {
+.collapse__header>.header__article--title {
   margin-left: 2.5rem;
 }
 
@@ -348,9 +361,10 @@ body {
   margin-right: auto;
   text-align: center;
 }
+
 .layout__time .time__text {
   padding: 2rem;
-  border: 6px dashed #333333;
+  border: 6px dashed var(--gb-header-nav);
   font-size: 4.5rem;
 }
 
@@ -374,7 +388,7 @@ body {
 
 .contacto__input,
 .contacto__select {
-  border: 2px solid #b7b4b4;
+  border: 2px solid var(--color-shadow);
   outline: none;
   padding: 5px;
   font-size: 1.5rem;
@@ -382,11 +396,11 @@ body {
 
 .contacto__input:focus,
 .contacto__select:focus {
-  border: 2px solid #235e3d;
+  border: 2px solid var(--primary-color);
 }
 
 .contacto__btn {
-  border: 1px #235e3d solid;
+  border: 1px var(--primary-color) solid;
   width: 15rem;
   padding: 0.5rem 1rem;
   transition: all 100ms linear;
@@ -397,8 +411,8 @@ body {
 }
 
 .contacto__btn:hover {
-  background-color: #235e3d;
-  color: white;
+  background-color: var(--primary-color);
+  color: var(--color-nav-link);
 }
 
 .just-validate-error-label {
@@ -418,12 +432,12 @@ body {
   left: 0;
   width: 4rem;
   height: 12rem;
-  background-color: white;
+  background-color: var(--bg-primary-color-layout);
   opacity: 0.8;
 }
 
-.themes > div {
-  border: 1px solid white;
+.themes>div {
+  border: 1px solid var(--bg-primary-color-layout);
   height: 3rem;
   width: 100%;
   cursor: pointer;
@@ -439,4 +453,45 @@ body {
 
 .themes__red {
   background-color: #a04e4f;
-}/*# sourceMappingURL=principal.css.map */
+}
+
+.themes__green--active {
+  --primary-color: #276061;
+  --image-background: url("../img/hojas.jpg");
+  --bg-primary-color-layout: white;
+  --gb-header-nav: #333333;
+  --color-nav-link: white;
+  --color-primary-transition-link: #235e3d;
+  --color-primary-transition-btn: #2d8453;
+  --color-shadow: #b7b4b4;
+  --date-color: #aaa5a5;
+  --accordion-header-color: #f6f6f6;
+  --primary-color: #235e3d;
+
+
+}
+
+.themes__blue--active {
+  --primary-color: #3f8bbd;
+  --bg-primary-color-layout: white;
+  --gb-header-nav: #333333;
+  --color-nav-link: white;
+  --color-primary-transition-link: #3db1fe;
+  ;
+  --color-primary-transition-btn: #23a1f5;
+  --image-background: url("../img/cielo.jpg");
+
+}
+
+.themes__red--active {
+  --primary-color: #a04e4f;
+  --bg-primary-color-layout: white;
+  --gb-header-nav: #333333;
+  --color-nav-link: white;
+  --color-primary-transition-link: #c44c4e;
+  ;
+  --color-primary-transition-btn: #c53a3c;
+  --image-background: url("../img/rojo.jpg");
+}
+
+/*# sourceMappingURL=principal.css.map */
